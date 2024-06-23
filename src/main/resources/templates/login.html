@@ -1,28 +1,9 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: main">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/css/style.css}">
-    <link rel="stylesheet" th:href="@{/bootstrap-icons/font/bootstrap-icons.css}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: #27191c;
-            color: #e0e4ce;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .form-control {
-            background-color: #2d3839;
-            color: #e0e4ce;
-        }
-        .btn-primary {
-            background-color: #114d4d;
-            border-color: #114d4d;
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -43,7 +24,5 @@
         </div>
     </div>
 </div>
-<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-<script th:src="@{/js/script.js}"></script>
 </body>
 </html>
