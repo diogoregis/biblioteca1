@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: main">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Books</title>
 </head>
 <body>
-<h1>Books</h1>
-<a href="/books/new" class="btn btn-primary mb-3"><i class="bi bi-plus-circle"></i> Add New Book</a>
-<table class="table table-striped">
-    <thead>
+
+<!-- Utiliza o layout e substitui o fragmento content -->
+
+    <!-- Conteúdo específico da página de livros -->
+    <h1>Books</h1>
+    <a href="/books/new" class="btn btn-primary mb-3"><i class="bi bi-plus-circle"></i> Add New Book</a>
+    <table class="table table-striped">
+        <thead>
         <tr>
             <th>Title</th>
             <th>Author</th>
@@ -15,8 +19,8 @@
             <th>Year</th>
             <th>Actions</th>
         </tr>
-    </thead>
-    <tbody>
+        </thead>
+        <tbody>
         <tr th:each="book : ${books}">
             <td th:text="${book.title}"></td>
             <td th:text="${book.author}"></td>
@@ -28,7 +32,9 @@
                 </a>
             </td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
+
 </body>
 </html>
